@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentación Saludable | Lo que dicen de nosotros</title>
+    <link rel="stylesheet" href="../scss/estilo.css">
+    <meta name="description" content="Mirá lo que nuestros clientes tienen para decir sobre los productos y sobre la atención recibida.">
+    <meta name="keywords" content="Comida, Saludable, Budines, Cookies, Galletas, Avena, Integral, Conservantes, Tentación, Bizcochitos, Reviews, Opiniones">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;700&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!--Barra lateral-->
+     <aside>
+        <a href="https://www.instagram.com/tentacionsaludablee/"><img src="../assets/instagram.svg" alt="instagram"></a>
+        <a href="https://www.facebook.com/Tentacionsaludablee"><img src="../assets/facebook.svg" alt="facebook"></a>
+    </aside>
+    <!--Header y navegación-->
+    <header>
+        <div class="header__logo">
+            <img src="../assets/logo.svg" alt="logo">
+        </div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Sobre mí</a></li>
+                <li><a style="color:black"  href="reviews.html">Reviews</a></li>
+                <li><a onclick="crearModal()">Contacto</a></li>
+            </ul>
+        </nav>
+      </header>
+    <!--main-->
+    <main class="reviews__main">
+        <h1 class="main__title">REVIEWS</h1>
+        <section class="reviews__contenedor">
+            <div class="reviews__card">
+                <span class="card__comillas">❝</span>
+                <p>Cada bocado es excelente, se siente súper liviano y a la vez calma la ansiedad por comer algo dulce!</p>
+                <div class="card__star__contenedor">
+                    <img src="../assets/star.svg">
+                    <p>4.8</p>
+                </div>
+                <em class="card__autor">Blanca Barragan</em>
+            </div>
+            <div class="reviews__card">
+                <span class="card__comillas">❝</span>
+                <p>Me lo recomendó un amigo y estaba un poco excéptico pero son lo que prometen. Recomiendo</p>
+                <div class="card__star__contenedor">
+                    <img src="../assets/star.svg">
+                    <p>4.6</p>
+                </div>
+                <em class="card__autor">Lucas Nora</em>
+            </div>
+            <div class="reviews__card">
+                <span class="card__comillas">❝</span>
+                <p>No tuve problemas para acoplarlos a mi dieta, se lo recomendé a todos</p>
+                <div class="card__star__contenedor">
+                    <img src="../assets/star.svg">
+                    <p>4.9</p>
+                </div>
+                <em class="card__autor">David Vegas</em>
+            </div>
+            <div class="reviews__card">
+                <span class="card__comillas">❝</span>
+                <p>Pedí por curiosidad una vez y ahora hacen ya 8 meses que soy cliente fijo</p>
+                <div class="card__star__contenedor">
+                    <img src="../assets/star.svg">
+                    <p>4.7</p>
+                </div>
+                <em class="card__autor">Marisa Gil</em>
+            </div>
+            <div class="reviews__card">
+                <span class="card__comillas">❝</span>
+                <p>La tremenda variedad de productos hace que nunca te aburras. Estoy realmente fascinado!</p>
+                <div class="card__star__contenedor">
+                    <img src="../assets/star.svg">
+                    <p>5.0</p>
+                </div>
+                <em class="card__autor">Roque Olivera</em>
+            </div>
+            <div class="reviews__card">
+                <span class="card__comillas">❝</span>
+                <p>La chica que lo maneja es súper amable y se toma el tiempo de aclarar muchas dudas. Sus productos son geniales</p>
+                <div class="card__star__contenedor">
+                    <img src="../assets/star.svg">
+                    <p>4.7</p>
+                </div>
+                <em class="card__autor">Lidia Puig</em>
+            </div>        
+    </main>
+    <div class="contacto__contenedor">
+        <div class="contacto__modal">
+            <div class="modal__quit" onclick="cerrarModal()">X</div>
+            <h3>Hablame y te contesto en breve!</h3>
+        <form action="">
+            <label for="name">Nombre*</label>
+            <input type="text" id="name" required>
+  
+            <label for="email">E-mail*</label>
+            <input type="email" id="email" required>
+  
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" required>
+  
+            <label for="mensaje">Mensaje*</label>
+            <textarea id="mensaje" cols="30" rows="5" required></textarea>
+  
+            <input type="submit" class="contacto__button main-button" value="ENVIAR">
+        </form>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer>
+        <section id="footer__newsletter">
+  
+            <p>Suscribite a nuestro newsletter semanal</p>
+            <input type="email" class="footer__inputEmail" placeholder="Email">
+            <input type="submit" value="ENVIAR" class="footer__send">
+            <article class="footer__conditions">
+                <input type="checkbox" name="termCond" id="termCond" class="footer__checkbox">
+                <label for="termCond">Enviando tu email aceptás los términos y condiciones de nuestro newsletter</label>
+            </article>
+  
+            <p class="footer__marca"><img src="../assets/copyright.svg" alt="copyright">Tentación Saludable, 2020</p>
+        </section>
+        <section id="footer__nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a onclick="crearModal()">Contacto</a></li>
+            </ul>
+        </section>
+    </footer>
+    <script>
+        let modal = document.querySelector('.contacto__contenedor')
+
+        crearModal = () => {
+            modal.style.opacity = '1'
+            modal.style.pointerEvents = 'all'
+        }
+        cerrarModal = () => {
+            modal.style.opacity = '0'
+            modal.style.pointerEvents = 'none'
+        }
+        
+    </script>
+</body>
+</html>

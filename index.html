@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentación Saludable | Productos Artesanales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;700&display=swap" rel="stylesheet">    
+    <meta name="description" content="Muchísimos productos artesanalas súper saludables para que disfrutes como quieras">
+    <meta name="keywords" content="Comida, Saludable, Budines, Cookies, Galletas, Avena, Integral, Conservantes, Tentación, Bizcochitos">
+    <link rel="stylesheet" href="scss/estilo.css">
+    
+</head>
+<body class="main__home">
+    <!--Barra lateral-->
+    <aside>
+            <a href="https://www.instagram.com/tentacionsaludablee/"><img src="assets/instagram.svg" alt="instagram"></a>
+            <a href="https://www.facebook.com/Tentacionsaludablee"><img src="assets/facebook.svg" alt="facebook"></a>
+    </aside>
+    <!--Header y navegación-->
+    <header>
+        <div class="header__logo">
+            <img src="assets/logo.svg" alt="logo">
+        </div>
+        <nav class="header__nav">
+            <ul>
+                <li><a style="color:black" href="index.html">Home</a></li>
+                <li><a href="HTML/productos.html">Productos</a></li>
+                <li><a href="HTML/nosotros.html">Sobre mí</a></li>
+                <li><a href="HTML/reviews.html">Reviews</a></li>
+                <li><a onclick="crearModal()">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Hero Section-->
+    <main>
+        <!--izquierda-->
+        <section class="izquierda_galeria">
+            <div class="galeria__info">
+                <input type="radio" name="photo" id="one" checked style="display: none;">
+                <label for="one" onclick="mostrarBudin()">
+                    01
+                </label>
+                /
+                <input type="radio" name="photo" id="two" style="display: none;">
+                <label for="two" onclick="mostrarCookie()">
+                    02
+                </label>
+                <div class="galeria__budines">
+                    <h5>Budines</h5>
+                    <p class="galeria__description">Suaves, esponjosos, hechos a tu medida. Los últimos budín que vas a necesitar</pid=>
+                </div>
+                <div class="galeria__cookies">
+                    <h5>Cookies</h5>
+                    <p class="galeria__description">Tiernas, sabrosas, hechas a tu medida. Las últimas cookies que vas a necesitar</pid=>
+                </div>
+            </div>
+            <div class="galeria__imagen-budin">
+                <img src="assets/bread-img.png" alt="budin">
+            </div>
+            <div class="galeria__imagen-cookie">
+                <img src="assets/cookies.png" alt="cookies">
+            </div>
+        </section>
+        <!--derecha-->
+        <section id="derecha__titulos">
+            <h2 class="titulos__primero titulo">Saludables.</h2>
+            <h2 class="titulos__primero titulo">Increíbles.</h2>
+            <h4 class="titulos__subtitulo">No te pierdas estas tentaciones</h4>
+            <a href="HTML/productos.html" class="titulos__button main-button">DESCUBRINOS</a>
+        </section>
+    </main>
+
+    <div class="contacto__contenedor">
+        <div class="contacto__modal">
+            <div class="modal__quit" onclick="cerrarModal()">X</div>
+            <h3>Hablame y te contesto en breve!</h3>
+        <form action="">
+            <label for="name">Nombre*</label>
+            <input type="text" id="name" required>
+            <label for="email">E-mail*</label>
+            <input type="email" id="email" required>
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" required>
+            <label for="mensaje">Mensaje*</label>
+            <textarea id="mensaje" cols="30" rows="5" required></textarea>
+            <input type="submit" class="contacto__button main-button" value="ENVIAR">
+        </form>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer>
+        <section id="footer__newsletter">
+
+            <p>Suscribite a nuestro newsletter semanal</p>
+            <input type="email" class="footer__inputEmail" placeholder="Email">
+            <input type="submit" value="ENVIAR" class="footer__send">
+            <article class="footer__conditions">
+                <input type="checkbox" name="termCond" id="termCond" class="footer__checkbox">
+                <label for="termCond">Enviando tu email aceptás los términos y condiciones de nuestro newsletter</label>
+            </article>
+
+            <p class="footer__marca"><img src="assets/copyright.svg" alt="copyright">Tentación Saludable, 2020</p>
+        </section>
+        <section id="footer__nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML/productos.html">Productos</a></li>
+                <li><a href="HTML/nosotros.html">Nosotros</a></li>
+                <li><a href="HTML/reviews.html">Reviews</a></li>
+                <li><a onclick="crearModal()">Contacto</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <script>
+        let budines = document.querySelector('.galeria__imagen-budin')
+        let cookies = document.querySelector('.galeria__imagen-cookie')
+
+        mostrarBudin = () => {
+            budines.style.display = "block"
+            cookies.style.display = "none"
+        }
+        mostrarCookie = () => {
+            budines.style.display = "none"
+            cookies.style.display = "block"
+        }
+
+
+        let modal = document.querySelector('.contacto__contenedor')
+
+        crearModal = () => {
+            modal.style.opacity = '1'
+            modal.style.pointerEvents = 'all'            
+        }
+        cerrarModal = () => {
+            modal.style.opacity = '0'
+            modal.style.pointerEvents = 'none'
+        }
+    </script>
+
+</body>
+</html>

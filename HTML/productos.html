@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentación Saludable | Disfrutá nuestra variedad</title>
+    <meta name="description" content="Muchísimos productos artesanalas súper saludables para que disfrutes como quieras.">
+    <meta name="keywords" content="Comida, Saludable, Budines, Cookies, Galletas, Avena, Integral, Conservantes, Tentación, Bizcochitos, Contenido, Productos">
+    <link rel="stylesheet" href="../scss/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!--Barra lateral-->
+     <aside>
+        <a href="https://www.instagram.com/tentacionsaludablee/"><img src="../assets/instagram.svg" alt="instagram"></a>
+        <a href="https://www.facebook.com/Tentacionsaludablee"><img src="../assets/facebook.svg" alt="facebook"></a>
+    </aside>
+    <!--Header y navegación-->
+    <header>
+      <div class="header__logo">
+          <img src="../assets/logo.svg" alt="logo">
+      </div>
+      <nav class="header__nav">
+          <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a style="color:black" href="productos.html">Productos</a></li>
+              <li><a href="nosotros.html">Sobre mí</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a onclick="crearModal()">Contacto</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <!--main-->
+    <main class="productos__main">
+        <h1 class="main__title">PRODUCTOS</h1>
+        <section class="productos__contenedor">
+          <div class="productos__card">
+              <img src="../assets/budin-banana.jpg" alt="producto">
+              <div class="productos__descripcion">
+                  <h3>Budín de banana</h3>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>800gr c/u</p>
+                  </div>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>32cm x 11cm x 9cm</p>
+                  </div>
+              </div>
+              <span class="productos__recomendado">ON DEMAND</span>
+          </div>
+          <div class="productos__card">
+              <img src="../assets/budin-chips-vainilla.jpg" alt="producto">
+              <div class="productos__descripcion">
+                  <h3>Budín de vainilla</h3>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>700gr c/u</p>
+                  </div>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>32cm x 11cm x 9cm</p>
+                  </div>
+              </div>
+          </div>
+          <div class="productos__card">
+              <img src="../assets/budin-manzana-canela.jpg" alt="producto">
+              <div class="productos__descripcion">
+                  <h3>Budín de manzana y canela</h3>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>800gr c/u</p>
+                  </div>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>32cm x 11cm x 9cm</p>
+                  </div>
+              </div>
+          </div>
+          <div class="productos__card">
+              <img src="../assets/gallet-vainilla.jpg" alt="producto">
+              <div class="productos__descripcion">
+                  <h3>Cookies de vainilla</h3>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>Por docena</p>
+                  </div>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>20gr c/u aprox.</p>
+                  </div>
+              </div>
+              <span class="productos__recomendado">ON DEMAND</span>
+          </div>
+          <div class="productos__card">
+              <img src="../assets/limon y pasas.jpg" alt="producto">
+              <div class="productos__descripcion">
+                  <h3>Cookies de limón y pasas</h3>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>Por docena</p>
+                  </div>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>15gr c/u aprox.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="productos__card">
+              <img src="../assets/biz-integrales.jpg" alt="producto">
+              <div class="productos__descripcion">
+                  <h3>Bizcochitos integrales <br><span>(con o sin orégano)</span></h3>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>Por 200gr</p>
+                  </div>
+                  <div class="productos__par flex">
+                      <img src="../assets/arrow.svg">
+                      <p>10gr c/u aprox.</p>
+                  </div>
+              </div>
+              <span class="productos__recomendado">ON DEMAND</span>
+          </div>
+      </section>   
+          
+        
+    </main>
+
+    <div class="contacto__contenedor">
+      <div class="contacto__modal">
+          <div class="modal__quit" onclick="cerrarModal()">X</div>
+          <h3>Hablame y te contesto en breve!</h3>
+      <form action="">
+          <label for="name">Nombre*</label>
+          <input type="text" id="name" required>
+
+          <label for="email">E-mail*</label>
+          <input type="email" id="email" required>
+
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" required>
+
+          <label for="mensaje">Mensaje*</label>
+          <textarea id="mensaje" cols="30" rows="5" required></textarea>
+
+          <input type="submit" class="contacto__button main-button" value="ENVIAR">
+      </form>
+      </div>
+  </div>
+    <!--Footer-->
+    <footer>
+      <section id="footer__newsletter">
+
+          <p>Suscribite a nuestro newsletter semanal</p>
+          <input type="email" class="footer__inputEmail" placeholder="Email">
+          <input type="submit" value="ENVIAR" class="footer__send">
+          <article class="footer__conditions">
+              <input type="checkbox" name="termCond" id="termCond" class="footer__checkbox">
+              <label for="termCond">Enviando tu email aceptás los términos y condiciones de nuestro newsletter</label>
+          </article>
+
+          <p class="footer__marca"><img src="../assets/copyright.svg" alt="copyright">Tentación Saludable, 2020</p>
+      </section>
+      <section id="footer__nav">
+          <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a onclick="crearModal()">Contacto</a></li>
+          </ul>
+      </section>
+    </footer>
+    <script>
+        let modal = document.querySelector('.contacto__contenedor')
+
+        crearModal = () => {
+            modal.style.opacity = '1'
+            modal.style.pointerEvents = 'all'
+        }
+        cerrarModal = () => {
+            modal.style.opacity = '0'
+            modal.style.pointerEvents = 'none'
+        }
+    </script>
+</body>
+</html>
