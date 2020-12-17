@@ -16,41 +16,49 @@
         <a href="https://www.facebook.com/Tentacionsaludablee"><img src="../assets/facebook.svg" alt="facebook"></a>
     </aside>
     <!--Header y navegación-->
-    <header>
-        <div class="header__logo">
-            <img src="../assets/logo.svg" alt="logo">
-        </div>
-        <nav class="header__nav">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a style="color:black" href="nosotros.html">Sobre mí</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a onclick="crearModal()">Contacto</a></li>
-            </ul>
-        </nav>
-      </header>
+    <section class="header__contenedor">
+        <header class="max-width">
+            <div class="header__logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.svg" alt="logo">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a style="color:black" href="nosotros.html">Sobre mí</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a onclick="crearModal()">Contacto</a></li>
+                </ul>
+            </nav>
+            <img onclick="toggleNav()" src="../assets/menu.svg" class="menu">
+        </header>
+    </section>
     <!--main-->
-    <main class="about__main">
-        <h1 class="main__title">SOBRE MÍ</h1>
-        <section class="about__seccion one">
-            <p>Mi nombre es Aldana. Empecé a cocinar saludable por hobbie y <strong>amor a la cocina</strong>, y de tanto darles de probar a mis amigas y familiares me impulsaron a que hiciera mi propio emprendimiento.</p>
-            <img class="seccion__img" src="../assets/about1.jpg" alt="">
-        </section>
-        <section class="about__seccion two">
-            <p>Hoy en día cuento con <strong>numerosos productos</strong> y otros varios en camino. Me siento plena y con muchísima energía para seguir deleitando clientes de la manera <strong>más saludable!</strong></p>
-            <img class="seccion__img" src="../assets/about2.jpg" alt="">
-        </section>
-        <section class="about__seccion three">
-            <p>Todos los productos están  <strong>elaborados principalmente</strong> con: harina de trigo integral, avena instantánea y azucar mascabo. <strong>No contienen conservantes</strong>, por eso sólo se realizan a pedido</p>
-            <img class="seccion__img" src="../assets/about3.jpg" alt="">
-        </section>
-        <section class="about__seccion four">
-            <p>Asimismo todos ellos son aptos para <strong>congelar, descongelar y fraccionar</strong> manteniendo perfectamente su <strong>calidad y estructura</strong></p>
-            <img class="seccion__img" src="../assets/about4.jpg" alt="">
-        </section>
-    </main>
-    <div class="contacto__contenedor">
+    <section class="main__contenedor">
+        <main class="about__main max-width">
+            <h1 class="main__title">SOBRE MÍ</h1>
+            <section class="about__seccion one">
+                <p>Mi nombre es Aldana. Empecé a cocinar saludable por hobbie y <strong>amor a la cocina</strong>, y de tanto darles de probar a mis amigas y familiares me impulsaron a que hiciera mi propio emprendimiento.</p>
+                <img class="seccion__img" src="../assets/about1.jpg" alt="">
+            </section>
+            <section class="about__seccion two">
+                <p>Hoy en día cuento con <strong>numerosos productos</strong> y otros varios en camino. Me siento plena y con muchísima energía para seguir deleitando clientes de la manera <strong>más saludable!</strong></p>
+                <img class="seccion__img" src="../assets/about2.jpg" alt="">
+            </section>
+            <section class="about__seccion three">
+                <p>Todos los productos están  <strong>elaborados principalmente</strong> con: harina de trigo integral, avena instantánea y azucar mascabo. <strong>No contienen conservantes</strong>, por eso sólo se realizan a pedido</p>
+                <img class="seccion__img" src="../assets/about3.jpg" alt="">
+            </section>
+            <section class="about__seccion four">
+                <p>Asimismo todos ellos son aptos para <strong>congelar, descongelar y fraccionar</strong> manteniendo perfectamente su <strong>calidad y estructura</strong></p>
+                <img class="seccion__img" src="../assets/about4.jpg" alt="">
+            </section>
+        </main>
+    </section>
+    <!--contacto-->
+    <section class="contacto__contenedor">
         <div class="contacto__modal">
             <div class="modal__quit" onclick="cerrarModal()">X</div>
             <h3>Hablame y te contesto en breve!</h3>
@@ -70,31 +78,33 @@
             <input type="submit" class="contacto__button main-button" value="ENVIAR">
         </form>
         </div>
-    </div>
+    </section>
     <!--Footer-->
-    <footer>
-        <section id="footer__newsletter">
-  
-            <p>Suscribite a nuestro newsletter semanal</p>
-            <input type="email" class="footer__inputEmail" placeholder="Email">
-            <input type="submit" value="ENVIAR" class="footer__send">
-            <article class="footer__conditions">
-                <input type="checkbox" name="termCond" id="termCond" class="footer__checkbox">
-                <label for="termCond">Enviando tu email aceptás los términos y condiciones de nuestro newsletter</label>
-            </article>
-  
-            <p class="footer__marca"><img src="../assets/copyright.svg" alt="copyright">Tentación Saludable, 2020</p>
-        </section>
-        <section id="footer__nav">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a onclick="crearModal()">Contacto</a></li>
-            </ul>
-        </section>
-    </footer>
+    <section class="footer__contenedor">
+        <footer class="max-width">
+            <section id="footer__newsletter">
+    
+                <p>Suscribite a nuestro newsletter semanal</p>
+                <input type="email" class="footer__inputEmail" placeholder="Email">
+                <input type="submit" value="ENVIAR" class="footer__send">
+                <article class="footer__conditions">
+                    <input type="checkbox" name="termCond" id="termCond" class="footer__checkbox">
+                    <label for="termCond">Enviando tu email aceptás los términos y condiciones de nuestro newsletter</label>
+                </article>
+    
+                <p class="footer__marca"><img src="../assets/copyright.svg" alt="copyright">Tentación Saludable, 2020</p>
+            </section>
+            <section id="footer__nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a onclick="crearModal()">Contacto</a></li>
+                </ul>
+            </section>
+        </footer>
+    </section>
 
     <script>
         let modal = document.querySelector('.contacto__contenedor')
@@ -106,6 +116,12 @@
         cerrarModal = () => {
             modal.style.opacity = '0'
             modal.style.pointerEvents = 'none'
+        }
+
+        let nav = document.querySelector('header nav ul')
+
+        toggleNav = () => {
+            nav.classList.toggle('navOpen');
         }
     </script>
 </body>

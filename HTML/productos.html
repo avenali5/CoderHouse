@@ -16,118 +16,122 @@
         <a href="https://www.facebook.com/Tentacionsaludablee"><img src="../assets/facebook.svg" alt="facebook"></a>
     </aside>
     <!--Header y navegación-->
-    <header>
-      <div class="header__logo">
-          <img src="../assets/logo.svg" alt="logo">
-      </div>
-      <nav class="header__nav">
-          <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a style="color:black" href="productos.html">Productos</a></li>
-              <li><a href="nosotros.html">Sobre mí</a></li>
-              <li><a href="reviews.html">Reviews</a></li>
-              <li><a onclick="crearModal()">Contacto</a></li>
-          </ul>
-      </nav>
-    </header>
-
+    <section class="header__contenedor">
+        <header class="max-width">
+        <div class="header__logo">
+            <a href="../index.html">
+                <img src="../assets/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a style="color:black" href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Sobre mí</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a onclick="crearModal()">Contacto</a></li>
+            </ul>
+        </nav>
+        <img onclick="toggleNav()" src="../assets/menu.svg" class="menu">
+        </header>
+    </section>
     <!--main-->
-    <main class="productos__main">
-        <h1 class="main__title">PRODUCTOS</h1>
-        <section class="productos__contenedor">
-          <div class="productos__card">
-              <img src="../assets/budin-banana.jpg" alt="producto">
-              <div class="productos__descripcion">
-                  <h3>Budín de banana</h3>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>800gr c/u</p>
-                  </div>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>32cm x 11cm x 9cm</p>
-                  </div>
-              </div>
-              <span class="productos__recomendado">ON DEMAND</span>
-          </div>
-          <div class="productos__card">
-              <img src="../assets/budin-chips-vainilla.jpg" alt="producto">
-              <div class="productos__descripcion">
-                  <h3>Budín de vainilla</h3>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>700gr c/u</p>
-                  </div>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>32cm x 11cm x 9cm</p>
-                  </div>
-              </div>
-          </div>
-          <div class="productos__card">
-              <img src="../assets/budin-manzana-canela.jpg" alt="producto">
-              <div class="productos__descripcion">
-                  <h3>Budín de manzana y canela</h3>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>800gr c/u</p>
-                  </div>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>32cm x 11cm x 9cm</p>
-                  </div>
-              </div>
-          </div>
-          <div class="productos__card">
-              <img src="../assets/gallet-vainilla.jpg" alt="producto">
-              <div class="productos__descripcion">
-                  <h3>Cookies de vainilla</h3>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>Por docena</p>
-                  </div>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>20gr c/u aprox.</p>
-                  </div>
-              </div>
-              <span class="productos__recomendado">ON DEMAND</span>
-          </div>
-          <div class="productos__card">
-              <img src="../assets/limon y pasas.jpg" alt="producto">
-              <div class="productos__descripcion">
-                  <h3>Cookies de limón y pasas</h3>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>Por docena</p>
-                  </div>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>15gr c/u aprox.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="productos__card">
-              <img src="../assets/biz-integrales.jpg" alt="producto">
-              <div class="productos__descripcion">
-                  <h3>Bizcochitos integrales <br><span>(con o sin orégano)</span></h3>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>Por 200gr</p>
-                  </div>
-                  <div class="productos__par flex">
-                      <img src="../assets/arrow.svg">
-                      <p>10gr c/u aprox.</p>
-                  </div>
-              </div>
-              <span class="productos__recomendado">ON DEMAND</span>
-          </div>
-      </section>   
-          
-        
-    </main>
-
-    <div class="contacto__contenedor">
+    <section class="main__contenedor">
+        <main class="productos__main max-width">
+            <h1 class="main__title">PRODUCTOS</h1>
+            <section class="productos__contenedor">
+            <div class="productos__card">
+                <img src="../assets/budin-banana.jpg" alt="producto">
+                <div class="productos__descripcion">
+                    <h3>Budín de banana</h3>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>800gr c/u</p>
+                    </div>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>32cm x 11cm x 9cm</p>
+                    </div>
+                </div>
+                <span class="productos__recomendado">ON DEMAND</span>
+            </div>
+            <div class="productos__card">
+                <img src="../assets/budin-chips-vainilla.jpg" alt="producto">
+                <div class="productos__descripcion">
+                    <h3>Budín de vainilla</h3>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>700gr c/u</p>
+                    </div>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>32cm x 11cm x 9cm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="productos__card">
+                <img src="../assets/budin-manzana-canela.jpg" alt="producto">
+                <div class="productos__descripcion">
+                    <h3>Budín de manzana y canela</h3>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>800gr c/u</p>
+                    </div>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>32cm x 11cm x 9cm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="productos__card">
+                <img src="../assets/gallet-vainilla.jpg" alt="producto">
+                <div class="productos__descripcion">
+                    <h3>Cookies de vainilla</h3>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>Por docena</p>
+                    </div>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>20gr c/u aprox.</p>
+                    </div>
+                </div>
+                <span class="productos__recomendado">ON DEMAND</span>
+            </div>
+            <div class="productos__card">
+                <img src="../assets/limon y pasas.jpg" alt="producto">
+                <div class="productos__descripcion">
+                    <h3>Cookies de limón y pasas</h3>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>Por docena</p>
+                    </div>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>15gr c/u aprox.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="productos__card">
+                <img src="../assets/biz-integrales.jpg" alt="producto">
+                <div class="productos__descripcion">
+                    <h3>Bizcochitos integrales <br><span>(con o sin orégano)</span></h3>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>Por 200gr</p>
+                    </div>
+                    <div class="productos__par flex">
+                        <img src="../assets/arrow.svg">
+                        <p>10gr c/u aprox.</p>
+                    </div>
+                </div>
+                <span class="productos__recomendado">ON DEMAND</span>
+            </div>
+            </section>   
+        </main>
+    </section>
+    <!--contacto-->
+    <section class="contacto__contenedor">
       <div class="contacto__modal">
           <div class="modal__quit" onclick="cerrarModal()">X</div>
           <h3>Hablame y te contesto en breve!</h3>
@@ -147,31 +151,34 @@
           <input type="submit" class="contacto__button main-button" value="ENVIAR">
       </form>
       </div>
-  </div>
+    </section>
     <!--Footer-->
-    <footer>
-      <section id="footer__newsletter">
+    <section class="footer__contenedor">
+        <footer class="max-width">
+        <section id="footer__newsletter">
 
-          <p>Suscribite a nuestro newsletter semanal</p>
-          <input type="email" class="footer__inputEmail" placeholder="Email">
-          <input type="submit" value="ENVIAR" class="footer__send">
-          <article class="footer__conditions">
-              <input type="checkbox" name="termCond" id="termCond" class="footer__checkbox">
-              <label for="termCond">Enviando tu email aceptás los términos y condiciones de nuestro newsletter</label>
-          </article>
+            <p>Suscribite a nuestro newsletter semanal</p>
+            <input type="email" class="footer__inputEmail" placeholder="Email">
+            <input type="submit" value="ENVIAR" class="footer__send">
+            <article class="footer__conditions">
+                <input type="checkbox" name="termCond" id="termCond" class="footer__checkbox">
+                <label for="termCond">Enviando tu email aceptás los términos y condiciones de nuestro newsletter</label>
+            </article>
 
-          <p class="footer__marca"><img src="../assets/copyright.svg" alt="copyright">Tentación Saludable, 2020</p>
-      </section>
-      <section id="footer__nav">
-          <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="productos.html">Productos</a></li>
-              <li><a href="nosotros.html">Nosotros</a></li>
-              <li><a href="reviews.html">Reviews</a></li>
-              <li><a onclick="crearModal()">Contacto</a></li>
-          </ul>
-      </section>
-    </footer>
+            <p class="footer__marca"><img src="../assets/copyright.svg" alt="copyright">Tentación Saludable, 2020</p>
+        </section>
+        <section id="footer__nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a onclick="crearModal()">Contacto</a></li>
+            </ul>
+        </section>
+        </footer>
+    </section>
+
     <script>
         let modal = document.querySelector('.contacto__contenedor')
 
@@ -182,6 +189,12 @@
         cerrarModal = () => {
             modal.style.opacity = '0'
             modal.style.pointerEvents = 'none'
+        }
+
+        let nav = document.querySelector('header nav ul')
+
+        toggleNav = () => {
+            nav.classList.toggle('navOpen');
         }
     </script>
 </body>

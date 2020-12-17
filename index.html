@@ -18,60 +18,67 @@
             <a href="https://www.facebook.com/Tentacionsaludablee"><img src="assets/facebook.svg" alt="facebook"></a>
     </aside>
     <!--Header y navegación-->
-    <header>
-        <div class="header__logo">
-            <img src="assets/logo.svg" alt="logo">
-        </div>
-        <nav class="header__nav">
-            <ul>
-                <li><a style="color:black" href="index.html">Home</a></li>
-                <li><a href="HTML/productos.html">Productos</a></li>
-                <li><a href="HTML/nosotros.html">Sobre mí</a></li>
-                <li><a href="HTML/reviews.html">Reviews</a></li>
-                <li><a onclick="crearModal()">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <section class="header__contenedor">
+        <header class="max-width">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="logo">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__ul">
+                    <li><a style="color:black" href="index.html">Home</a></li>
+                    <li><a href="HTML/productos.html">Productos</a></li>
+                    <li><a href="HTML/nosotros.html">Sobre mí</a></li>
+                    <li><a href="HTML/reviews.html">Reviews</a></li>
+                    <li><a onclick="crearModal()">Contacto</a></li>
+                </ul>
+            </nav>
+            <img onclick="toggleNav()" src="assets/menu.svg" class="menu">
+        </header>
+    </section>
     <!--Hero Section-->
-    <main>
-        <!--izquierda-->
-        <section class="izquierda_galeria">
-            <div class="galeria__info">
-                <input type="radio" name="photo" id="one" checked style="display: none;">
-                <label for="one" onclick="mostrarBudin()">
-                    01
-                </label>
-                /
-                <input type="radio" name="photo" id="two" style="display: none;">
-                <label for="two" onclick="mostrarCookie()">
-                    02
-                </label>
-                <div class="galeria__budines">
-                    <h5>Budines</h5>
-                    <p class="galeria__description">Suaves, esponjosos, hechos a tu medida. Los últimos budín que vas a necesitar</pid=>
+    <section class="main__contenedor">
+        <main class="max-width">
+            <!--izquierda-->
+            <section class="izquierda_galeria">
+                <div class="galeria__info">
+                    <input type="radio" name="photo" id="one" checked style="display: none;">
+                    <label for="one" onclick="mostrarBudin()">
+                        01
+                    </label>
+                    /
+                    <input type="radio" name="photo" id="two" style="display: none;">
+                    <label for="two" onclick="mostrarCookie()">
+                        02
+                    </label>
+                    <div class="galeria__budines">
+                        <h5>Budines</h5>
+                        <p class="galeria__description">Suaves, esponjosos, hechos a tu medida. Los últimos budín que vas a necesitar</pid=>
+                    </div>
+                    <div class="galeria__cookies">
+                        <h5>Cookies</h5>
+                        <p class="galeria__description">Tiernas, sabrosas, hechas a tu medida. Las últimas cookies que vas a necesitar</pid=>
+                    </div>
                 </div>
-                <div class="galeria__cookies">
-                    <h5>Cookies</h5>
-                    <p class="galeria__description">Tiernas, sabrosas, hechas a tu medida. Las últimas cookies que vas a necesitar</pid=>
+                <div class="galeria__imagen-budin">
+                    <img src="assets/bread-img.png" alt="budin">
                 </div>
-            </div>
-            <div class="galeria__imagen-budin">
-                <img src="assets/bread-img.png" alt="budin">
-            </div>
-            <div class="galeria__imagen-cookie">
-                <img src="assets/cookies.png" alt="cookies">
-            </div>
-        </section>
-        <!--derecha-->
-        <section id="derecha__titulos">
-            <h2 class="titulos__primero titulo">Saludables.</h2>
-            <h2 class="titulos__primero titulo">Increíbles.</h2>
-            <h4 class="titulos__subtitulo">No te pierdas estas tentaciones</h4>
-            <a href="HTML/productos.html" class="titulos__button main-button">DESCUBRINOS</a>
-        </section>
-    </main>
-
-    <div class="contacto__contenedor">
+                <div class="galeria__imagen-cookie">
+                    <img src="assets/cookies.png" alt="cookies">
+                </div>
+            </section>
+            <!--derecha-->
+            <section id="derecha__titulos">
+                <h2 class="titulos__primero titulo">Saludables.</h2>
+                <h2 class="titulos__primero titulo">Increíbles.</h2>
+                <h4 class="titulos__subtitulo">No te pierdas estas tentaciones</h4>
+                <a href="HTML/productos.html" class="titulos__button main-button">DESCUBRINOS</a>
+            </section>
+        </main>
+    </section>
+    <!--contacto-->
+    <section class="contacto__contenedor">
         <div class="contacto__modal">
             <div class="modal__quit" onclick="cerrarModal()">X</div>
             <h3>Hablame y te contesto en breve!</h3>
@@ -87,11 +94,11 @@
             <input type="submit" class="contacto__button main-button" value="ENVIAR">
         </form>
         </div>
-    </div>
+    </section>
     <!--Footer-->
-    <footer>
+    <section class="footer__contenedor">
+        <footer class="max-width">
         <section id="footer__newsletter">
-
             <p>Suscribite a nuestro newsletter semanal</p>
             <input type="email" class="footer__inputEmail" placeholder="Email">
             <input type="submit" value="ENVIAR" class="footer__send">
@@ -111,7 +118,8 @@
                 <li><a onclick="crearModal()">Contacto</a></li>
             </ul>
         </section>
-    </footer>
+        </footer>
+    </section>
 
     <script>
         let budines = document.querySelector('.galeria__imagen-budin')
@@ -136,6 +144,12 @@
         cerrarModal = () => {
             modal.style.opacity = '0'
             modal.style.pointerEvents = 'none'
+        }
+ 
+        let nav = document.querySelector('.nav__ul')
+
+        toggleNav = () => {
+            nav.classList.toggle('navOpen');
         }
     </script>
 
