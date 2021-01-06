@@ -171,6 +171,9 @@ main .izquierda_galeria {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 main .izquierda_galeria .galeria__info {
@@ -825,6 +828,11 @@ main #derecha__titulos .main-button:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  main .izquierda_galeria {
+    left: 0%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   main #derecha__titulos {
     left: 5rem;

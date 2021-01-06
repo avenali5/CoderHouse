@@ -124,6 +124,8 @@ main{
     .izquierda_galeria{
         display:flex;
         position: relative;
+        left:50%;
+        transform: translateX(-50%);
 
         .galeria__info{
             position: absolute;
@@ -625,7 +627,10 @@ $rows:(
 @media(min-width:768px){
     main{ 
         flex-direction: row;
-
+        .izquierda_galeria{
+            left:0%;
+            transform: translateX(0%);
+        }
         #derecha__titulos{
             left:5rem;
             text-align:left;
