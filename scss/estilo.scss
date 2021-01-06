@@ -406,8 +406,9 @@ $rows:(
         }
         p{
             width:100%;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             margin-bottom:1.5rem;
+            line-height: 1.5;
         }
     }
     @each $number, $flex in $rows {
@@ -790,7 +791,7 @@ $rows:(
             }
             p{
                 width:40%;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
         }
         @each $number, $flex in $rows {

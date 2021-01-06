@@ -536,8 +536,9 @@ main #derecha__titulos .main-button:hover {
 
 .about__main .about__seccion p {
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 .about__main .one {
@@ -989,7 +990,7 @@ main #derecha__titulos .main-button:hover {
   }
   .about__main .about__seccion p {
     width: 40%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .about__main .one {
     -webkit-box-orient: horizontal !important;
