@@ -289,7 +289,6 @@ main #derecha__titulos .derecha__titulos--principal .primero {
 }
 
 main #derecha__titulos .derecha__titulos--principal .segundo {
-  font-family: Artisan;
   -webkit-transform: translateY(10rem);
           transform: translateY(10rem);
   -webkit-animation: slideUp .8s .4s forwards;
