@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentación Saludable | Sobre mí</title>
     <meta name="description" content="Te cuento quién soy, cómo y por qué empecé en esto y cómo hago mis productos y recetas.">
     <meta name="keywords" content="Comida, Saludable, Budines, Cookies, Galletas, Avena, Integral, Conservantes, Tentación, Bizcochitos, Sobre mí">
-    <link rel="stylesheet" href="../scss/estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../scss/estilo.css">
+    <style>
+        /*pequeño puntito del navlink seleccionado*/
+        @media(min-width: 992px){
+            header li:nth-child(3)::after{
+                content:'';
+                width:.5rem; height:.5rem;
+                position:absolute;
+                background:#BCA49C;
+                left:50%;
+                bottom:-1rem;
+                transform:translateX(-50%);
+                border-radius: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
      <!--Barra lateral-->
      <aside>
-        <a href="https://www.instagram.com/tentacionsaludablee/"><img src="../assets/instagram.svg" alt="instagram"></a>
-        <a href="https://www.facebook.com/Tentacionsaludablee"><img src="../assets/facebook.svg" alt="facebook"></a>
+        <a href="https://www.instagram.com/tentacionsaludablee/" target="__blank"><img src="../assets/instagram.svg" alt="instagram"></a>
+        <a href="https://www.facebook.com/Tentacionsaludablee" target="__blank"><img src="../assets/facebook.svg" alt="facebook"></a>
     </aside>
     <!--Header y navegación-->
     <section class="header__contenedor">
@@ -38,7 +54,9 @@
     <!--main-->
     <section class="main__contenedor">
         <main class="about__main max-width">
-            <h1 class="main__title">SOBRE MÍ</h1>
+            <section class="main__title__contenedor">
+                <h1 class="main__title">SOBRE MÍ</h1>
+            </section>
             <section class="about__seccion one">
                 <p>Mi nombre es Aldana. Empecé a cocinar saludable por hobbie y <strong>amor a la cocina</strong>, y de tanto darles de probar a mis amigas y familiares me impulsaron a que hiciera mi propio emprendimiento.</p>
                 <img class="seccion__img" src="../assets/about1.jpg" alt="">
@@ -62,28 +80,27 @@
         <div class="contacto__modal">
             <div class="modal__quit" onclick="cerrarModal()">X</div>
             <h3>Hablame y te contesto en breve!</h3>
-        <form action="">
-            <label for="name">Nombre*</label>
-            <input type="text" id="name" required>
-  
-            <label for="email">E-mail*</label>
-            <input type="email" id="email" required>
-  
-            <label for="asunto">Asunto</label>
-            <input type="text" id="asunto" required>
-  
-            <label for="mensaje">Mensaje*</label>
-            <textarea id="mensaje" cols="30" rows="5" required></textarea>
-  
-            <input type="submit" class="contacto__button main-button" value="ENVIAR">
-        </form>
+            <form action="">
+                <label for="name">Nombre*</label>
+                <input type="text" id="name" required>
+    
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" required>
+    
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" required>
+    
+                <label for="mensaje">Mensaje*</label>
+                <textarea id="mensaje" cols="30" rows="5" required></textarea>
+    
+                <input type="submit" class="contacto__button main-button" value="ENVIAR">
+            </form>
         </div>
     </section>
     <!--Footer-->
     <section class="footer__contenedor">
         <footer class="max-width">
             <section id="footer__newsletter">
-    
                 <p>Suscribite a nuestro newsletter semanal</p>
                 <input type="email" class="footer__inputEmail" placeholder="Email">
                 <input type="submit" value="ENVIAR" class="footer__send">
@@ -91,14 +108,13 @@
                     <input type="checkbox" name="termCond" id="termCond" class="footer__checkbox">
                     <label for="termCond">Enviando tu email aceptás los términos y condiciones de nuestro newsletter</label>
                 </article>
-    
                 <p class="footer__marca"><img src="../assets/copyright.svg" alt="copyright">Tentación Saludable, 2020</p>
             </section>
             <section id="footer__nav">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="productos.html">Productos</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="nosotros.html"  style="color:white">Sobre mí</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
                     <li><a onclick="crearModal()">Contacto</a></li>
                 </ul>
@@ -107,6 +123,7 @@
     </section>
 
     <script>
+        //modal de contacto
         let modal = document.querySelector('.contacto__contenedor')
 
         crearModal = () => {
@@ -118,6 +135,7 @@
             modal.style.pointerEvents = 'none'
         }
 
+        //menu hamburguesa
         let nav = document.querySelector('header nav ul')
 
         toggleNav = () => {

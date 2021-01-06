@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentación Saludable | Lo que dicen de nosotros</title>
-    <link rel="stylesheet" href="../scss/estilo.css">
     <meta name="description" content="Mirá lo que nuestros clientes tienen para decir sobre los productos y sobre la atención recibida.">
     <meta name="keywords" content="Comida, Saludable, Budines, Cookies, Galletas, Avena, Integral, Conservantes, Tentación, Bizcochitos, Reviews, Opiniones">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;700&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/estilo.css">
+    <link rel="shortcut icon" href="../assets/icon.svg" type="image/x-icon">
+    <style>
+        /*pequeño puntito del navlink seleccionado*/
+        @media(min-width: 992px){
+            header li:nth-child(4)::after{
+                content:'';
+                width:.5rem; height:.5rem;
+                position:absolute;
+                background:#BCA49C;
+                left:50%;
+                bottom:-1rem;
+                transform:translateX(-50%);
+                border-radius: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
      <!--Barra lateral-->
      <aside>
-        <a href="https://www.instagram.com/tentacionsaludablee/"><img src="../assets/instagram.svg" alt="instagram"></a>
-        <a href="https://www.facebook.com/Tentacionsaludablee"><img src="../assets/facebook.svg" alt="facebook"></a>
+        <a href="https://www.instagram.com/tentacionsaludablee/" target="__blank"><img src="../assets/instagram.svg" alt="instagram"></a>
+        <a href="https://www.facebook.com/Tentacionsaludablee" target="__blank"><img src="../assets/facebook.svg" alt="facebook"></a>
     </aside>
     <!--Header y navegación-->
     <section class="header__contenedor">
@@ -39,8 +55,15 @@
     <!--main-->
     <section class="main__contenedor">
         <main class="reviews__main max-width">
-            <h1 class="main__title">REVIEWS</h1>
+            <section class="main__title__contenedor">
+                <h1 class="main__title">REVIEWS</h1>
+            </section>
+            <!-- recursos visuales -->
+            <img src="../assets/circulos.svg" alt="" class="circulos1">
+            <img src="../assets/circulos.svg" alt="" class="circulos2">
+            <!-- fin de recursos visuales -->
             <section class="reviews__contenedor">
+                
                 <div class="reviews__card">
                     <span class="card__comillas">❝</span>
                     <p>Cada bocado es excelente, se siente súper liviano y a la vez calma la ansiedad por comer algo dulce!</p>
@@ -102,28 +125,27 @@
         <div class="contacto__modal">
             <div class="modal__quit" onclick="cerrarModal()">X</div>
             <h3>Hablame y te contesto en breve!</h3>
-        <form action="">
-            <label for="name">Nombre*</label>
-            <input type="text" id="name" required>
-  
-            <label for="email">E-mail*</label>
-            <input type="email" id="email" required>
-  
-            <label for="asunto">Asunto</label>
-            <input type="text" id="asunto" required>
-  
-            <label for="mensaje">Mensaje*</label>
-            <textarea id="mensaje" cols="30" rows="5" required></textarea>
-  
-            <input type="submit" class="contacto__button main-button" value="ENVIAR">
-        </form>
+            <form action="">
+                <label for="name">Nombre*</label>
+                <input type="text" id="name" required>
+    
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" required>
+    
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" required>
+    
+                <label for="mensaje">Mensaje*</label>
+                <textarea id="mensaje" cols="30" rows="5" required></textarea>
+    
+                <input type="submit" class="contacto__button main-button" value="ENVIAR">
+            </form>
         </div>
     </section>
     <!--Footer-->
     <section class="footer__contenedor">
         <footer class="max-width">
             <section id="footer__newsletter">
-    
                 <p>Suscribite a nuestro newsletter semanal</p>
                 <input type="email" class="footer__inputEmail" placeholder="Email">
                 <input type="submit" value="ENVIAR" class="footer__send">
@@ -131,15 +153,14 @@
                     <input type="checkbox" name="termCond" id="termCond" class="footer__checkbox">
                     <label for="termCond">Enviando tu email aceptás los términos y condiciones de nuestro newsletter</label>
                 </article>
-    
                 <p class="footer__marca"><img src="../assets/copyright.svg" alt="copyright">Tentación Saludable, 2020</p>
             </section>
             <section id="footer__nav">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="productos.html">Productos</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="nosotros.html">Sobre mí</a></li>
+                    <li><a href="reviews.html" style="color:white">Reviews</a></li>
                     <li><a onclick="crearModal()">Contacto</a></li>
                 </ul>
             </section>
@@ -147,6 +168,7 @@
     </section>
 
     <script>
+        //modal de contacto
         let modal = document.querySelector('.contacto__contenedor')
 
         crearModal = () => {
@@ -158,6 +180,7 @@
             modal.style.pointerEvents = 'none'
         }
         
+        //menu hamburguesa
         let nav = document.querySelector('header nav ul')
 
         toggleNav = () => {
